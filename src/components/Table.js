@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Table.css'
 
 const Table = () =>
 {
@@ -65,11 +66,15 @@ const handleCheckBoxChanged = (event,index,type) =>
 
 }
 
+const handleSubmit = () => {
+    
+}
+
 let [prayers,setprayers] = useState(PrayerObj);
 
     return (
         <>
-        <table>
+        <table className="prayerTable">
             <thead>
 
              <th>Prayers</th>
@@ -78,7 +83,7 @@ let [prayers,setprayers] = useState(PrayerObj);
              <th>Ba-Jamat</th>
              <th>khusoo</th>
             </thead>
-            <tbody>
+            <tbody className="prayerbody">
                 { prayers.map((prayer,index)=>
                 <tr>
                     <th>{prayer.name} </th>
@@ -95,9 +100,14 @@ let [prayers,setprayers] = useState(PrayerObj);
                         <input type="number" value={PrayerObj.khusoo} name="khusoo"   min="0" max="5" onChange={(event)=>handleCheckBoxChanged(event,index,'khusoo')}/>
                     </td>
                 </tr>)
+
 }
             </tbody>
         </table>
+
+        <div>
+            <button class="btn" type="submit" onClick={()=>handleSubmit}>Submit</button>
+        </div>
         </>
     )
 

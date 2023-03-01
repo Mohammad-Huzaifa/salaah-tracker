@@ -1,0 +1,16 @@
+.prayerTable{
+    margin: 0px auto; 
+}
+
+/* .prayerbody
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+.btn{
+    background-color: blue;
+    color: #000;
+    border-radius: 10%;
+}
